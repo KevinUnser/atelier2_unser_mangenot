@@ -3,116 +3,65 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
+  <div>
+    <header class="p-3 bg-dark text-white">
+      <div
+        id="div_header"
+        class="
+          d-flex
+          flex-wrap
+          align-items-center
+          justify-content-center justify-content-lg-start
+        "
+      >
+        <nav
+          id="nav_header"
+          class="
+            d-flex
+            flex-wrap
+            align-items-center
+            justify-content-center justify-content-lg-start
+          "
+        >
+          <ul
+            class="
+              nav
+              col-12 col-lg-auto
+              me-lg-auto
+              mb-2
+              justify-content-center
+              mb-md-0
+            "
+          >
+            <li><RouterLink class="routerlink" to="/">Home</RouterLink></li>
+            <li>
+              <RouterLink class="routerlink" to="/events">Events</RouterLink>
+            </li>
+          </ul>
 
-
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/events">Events</RouterLink>
-        <RouterLink to="/signup">Sign Up</RouterLink>
-        <RouterLink to="/signin">Sign In</RouterLink>
-      </nav>
-    </div>
+          <div id="div_account" class="text-end">
+            <RouterLink class="routerlink" to="/signup">Sign Up</RouterLink>
+            <RouterLink class="routerlink" to="/signin">Sign In</RouterLink>
+          </div>
+        </nav>
+      </div>
+    </header>
     <RouterView />
-  </header>
-
-  
+  </div>
 </template>
 
 <style>
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
+.routerlink {
+  margin: 1em;
+  color: aliceblue;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+#div_account {
+  margin-left: 60%;
 }
 
-nav {
+#nav_header {
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
 }
 </style>

@@ -1,10 +1,10 @@
 <script setup>
-import Event from "@/components/Event.vue";
+import EventD from "@/components/EventDetails.vue";
 </script>
 
 <template>
     <div>
         <p>vous êtes ici dans la vue d'un évènement</p>
-        <Event />
+        <EventD />
     </div>
 </template>

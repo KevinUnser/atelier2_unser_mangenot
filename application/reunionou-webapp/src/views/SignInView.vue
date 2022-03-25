@@ -1,5 +1,56 @@
 <template>
-    <div>
-        <p>vous êtes ici sur la page d'identification</p>
+  <div>
+    <div id="div_form">
+      <form action="" class="p-3 mt-3">
+        <div class="mb-3">
+          <label class="form-label" for="input_lastname">lastname</label>
+          <input
+            class="form-control"
+            type="text"
+            id="input_lastname"
+            placeholder="your lastname"
+          />
+          <div class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="input_firstname">firstname</label>
+          <input
+            class="form-control"
+            type="text"
+            id="input_firstname"
+            placeholder="your firstname"
+          />
+          <div class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="input_pass">password</label>
+          <input
+            class="form-control"
+            type="text"
+            id="input_pass"
+            placeholder="password"
+          />
+          <div class="form-text"></div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <p class="m-2 me-5">you haven't an account ? go on<RouterLink id="SignUp_SIview" class="routerlink" to="/signup">Sign Up</RouterLink></p>
+          <button type="submit" class="btn btn-success">sign in</button>
+        </div>
+      </form>
     </div>
+  </div>
 </template>
+
+<style>
+
+#SignUp_SIview{
+    color: blue;
+    text-decoration: underline;
+}
+
+#SignUp_SIview:hover{
+    cursor: pointer;
+}
+
+</style>
