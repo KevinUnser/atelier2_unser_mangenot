@@ -1,10 +1,30 @@
-<script setup>
+<script>
 import EventD from "@/components/EventDetails.vue";
+import App from "@/App.vue";
+import globale from "../globale";
+
+export default {
+    setup(){
+        const {state} = globale;
+
+        return {state}
+    },
+    data() {
+        return{
+            id_data: globale.state.currentEventId
+        }
+    },
+    components: {EventD},
+    methods: {
+        log(text){
+            console.log(globale.state.currentEventId);
+        }
+    }
+}
 </script>
 
 <template>
     <div>
-        <p>vous êtes ici dans la vue d'un évènement</p>
-        <EventD />
+        <EventD :id="id_data" />
     </div>
 </template>

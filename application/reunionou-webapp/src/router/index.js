@@ -29,7 +29,7 @@ const router = createRouter({
       component: SignInView,
     },
     {
-      path: "/event/[id]",
+      path: "/event",
       name: "event",
       component: EventView,
     },

@@ -1,3 +1,15 @@
+<script>
+export default {
+  props: ["id"],
+};
+</script>
+
 <template>
-    <p>ceci est un évènement</p>
+  <div>
+    <p>ceci est un évenement {{ id }}</p>
+  </div>
 </template>
+
+<style>
+</style>
+
