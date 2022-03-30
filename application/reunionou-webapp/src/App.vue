@@ -1,5 +1,24 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from "vue-router";
+import HomeView from "./views/HomeView.vue";
+import EventsView from "./views/EventsView.vue";
+import EventView from "./views/EventView.vue";
+import SignUpView from "./views/SignUpView.vue";
+import SignInView from "./views/SignInView.vue";
+import EventD from "./components/EventDetails.vue";
+import EventR from "./components/EventResume.vue";
+
+
+export default {
+  name: "reunionou",
+  views: {HomeView, EventsView, EventView, SignUpView, SignInView},
+  components: {EventD, EventR},
+  data() {
+    return {
+      current: 3 
+    }
+  },
+};
 </script>
 
 <template>
