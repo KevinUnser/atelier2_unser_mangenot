@@ -3,22 +3,12 @@
     <div id="div_form">
       <form action="" class="p-3 mt-3">
         <div class="mb-3">
-          <label class="form-label" for="input_lastname">lastname</label>
+          <label class="form-label" for="input_email">e-mail</label>
           <input
             class="form-control"
-            type="text"
-            id="input_lastname"
-            placeholder="your lastname"
-          />
-          <div class="form-text"></div>
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="input_firstname">firstname</label>
-          <input
-            class="form-control"
-            type="text"
-            id="input_firstname"
-            placeholder="your firstname"
+            type="email"
+            id="input_email"
+            placeholder="your email"
           />
           <div class="form-text"></div>
         </div>

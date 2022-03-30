@@ -13,7 +13,7 @@
           <div class="form-text"></div>
         </div>
         <div class="mb-3">
-          <label class="form-label" for="input_firstname">firstname</label>
+          <label class="form-label" for="input_firstname">firstname *</label>
           <input
             class="form-control"
             type="text"
@@ -23,7 +23,17 @@
           <div class="form-text"></div>
         </div>
         <div class="mb-3">
-          <label class="form-label" for="input_pass">password</label>
+          <label class="form-label" for="input_email">e-mail *</label>
+          <input
+            class="form-control"
+            type="email"
+            id="input_email"
+            placeholder="your email"
+          />
+          <div class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="input_pass">password *</label>
           <input
             class="form-control"
             type="text"
@@ -34,7 +44,7 @@
         </div>
         <div class="mb-3">
           <label class="form-label" for="input_passconfirm"
-            >confirme your password</label
+            >confirme your password *</label
           >
           <input
             class="form-control"

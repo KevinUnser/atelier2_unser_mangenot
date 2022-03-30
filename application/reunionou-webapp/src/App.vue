@@ -56,6 +56,9 @@ export default {
             <li>
               <RouterLink class="routerlink" to="/events">Events</RouterLink>
             </li>
+            <li>
+              <RouterLink class="routerlink" to="/createEvent">Créer un event</RouterLink>
+            </li>
           </ul>
 
           <div id="div_account" class="text-end">
@@ -74,10 +77,6 @@ export default {
   margin: 1em;
   color: aliceblue;
   text-decoration: none;
-}
-
-#div_account {
-  margin-left: 60%;
 }
 
 #nav_header {

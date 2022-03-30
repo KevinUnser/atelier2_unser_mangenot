@@ -27,9 +27,9 @@ export default {
         </div>
 
         <div id="div_reponse">
-          <button class="btn btn-primary">ça m'intéresse</button>
-          <button class="btn btn-success">je viens</button>
-          <button class="btn btn-danger">je ne peux pas</button>
+          <button class="btn btn-primary btn_event">ça m'intéresse</button>
+          <button class="btn btn-success btn_event">je viens</button>
+          <button class="btn btn-danger btn_event">je ne peux pas</button>
         </div>
       </div>
     </div>
@@ -124,7 +124,7 @@ export default {
   margin-top: 30%;
 }
 
-.btn {
+.btn_event {
   width: 60%;
   margin: 0.2em;
 }

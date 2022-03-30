@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import EventsView from "../views/EventsView.vue";
 import EventView from "../views/EventView.vue";
+import CreateEventView from "../views/CreateEventView.vue";
 import SignUpView from "../views/SignUpView.vue";
 import SignInView from "../views/SignInView.vue";
 
@@ -32,6 +33,11 @@ const router = createRouter({
       path: "/event",
       name: "event",
       component: EventView,
+    },
+    {
+      path: "/createEvent",
+      name: "createEvent",
+      component: CreateEventView,
     },
     {
       path: "/about",
