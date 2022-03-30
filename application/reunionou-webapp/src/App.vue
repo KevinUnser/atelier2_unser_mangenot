@@ -8,15 +8,55 @@ import SignInView from "./views/SignInView.vue";
 import EventD from "./components/EventDetails.vue";
 import EventR from "./components/EventResume.vue";
 
+import globale from "./globale";
+import axios from "axios";
 
 export default {
   name: "reunionou",
-  views: {HomeView, EventsView, EventView, SignUpView, SignInView},
-  components: {EventD, EventR},
+  views: { HomeView, EventsView, EventView, SignUpView, SignInView },
+  components: { EventD, EventR },
   data() {
     return {
-      current: 3 
-    }
+      current: 3,
+    };
+  },
+  methods: {
+    getEvents() {
+      const path = "./Events.json";
+      // Make a request for a user with a given ID
+      axios
+        .get(path)
+        .then(function (response) {
+          // handle success
+          globale.state.events = response.data.Evenements; 
+
+          let div_shareEvents = document.getElementById("div_shareEvents");
+          let i = 0;
+          globale.state.events.forEach(event => {
+            let rtlk = document.createElement(RouterLink)
+            rtlk.className = "rtlk_evenR";
+            rtlk.to = "/event";
+            
+            let eventR = document.createElement(EventR);
+            eventR.addEventListener("click", () => {
+                    globale.state.currentEventId = id;
+            });
+
+            rtlk.appendChild(eventR);
+            div_shareEvents.appendChild(rtlk);
+            i++;
+            console.log(rtlk);
+          });
+          //console.log(div_shareEvents);
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+        })
+        .then(function () {
+          // always executed
+        });
+    },
   },
 };
 </script>
@@ -53,11 +93,13 @@ export default {
             "
           >
             <li><RouterLink class="routerlink" to="/">Home</RouterLink></li>
-            <li>
+            <li @click="getEvents()">
               <RouterLink class="routerlink" to="/events">Events</RouterLink>
             </li>
             <li>
-              <RouterLink class="routerlink" to="/createEvent">Créer un event</RouterLink>
+              <RouterLink class="routerlink" to="/createEvent"
+                >Créer un event</RouterLink
+              >
             </li>
           </ul>
 

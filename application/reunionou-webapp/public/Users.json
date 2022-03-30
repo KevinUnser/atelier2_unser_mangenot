@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "email": "roger.robert@gm.cm",
+            "nom": "robert",
+            "prenom": "roger"
+        },
+        {
+            "email": "math08@ht.fr",
+            "nom": "",
+            "prenom": "mathilde"
+        }
+    ] 
+}
