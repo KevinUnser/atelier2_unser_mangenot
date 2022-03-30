@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = new Database({
-    user:'root',
+    user:'reunionou',
     host: 'localhost',
     password:'',
     database:'reunionou',
@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`)
+  console.log(`http://localhost:${port}`)
 });
 
 require('./evenements/evenements.js')(app,db);

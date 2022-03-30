@@ -31,8 +31,8 @@ CREATE TABLE `evenements` (
   `IDevent` int(6) NOT NULL,
   `Intitule` varchar(250) DEFAULT NULL,
   `Lieu` varchar(250) DEFAULT NULL,
-  `Latitude`, decimal(9, 6) DEFAULT NULL,
-  `Longitude`, decimal(9, 6) DEFAULT NULL,
+  `Latitude` decimal(9,6) DEFAULT NULL,
+  `Longitude` decimal(9,6) DEFAULT NULL,
   `Date` date DEFAULT NULL,
   `Heure` varchar(250) DEFAULT NULL,
   `State` int(1) DEFAULT NULL
@@ -64,7 +64,7 @@ CREATE TABLE `membres` (
 -- Déchargement des données de la table `membres`
 --
 
-INSERT INTO `membres` (`IDmember`, `unserkevinpro@gmail.com`, `123456789` `Nom`, `Prenom`, `State`) VALUES
+INSERT INTO `membres` (`IDmember`, `Email`, `Mdp`, `Nom`, `Prenom`, `State`) VALUES
 (1, 'unserkevinpro@gmail.com', '123456789', 'Unser', 'Kévin', 1);
 
 -- --------------------------------------------------------
